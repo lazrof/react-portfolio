@@ -9,17 +9,25 @@ import JobDetail from './components/job-detail/job-detail';
 import './App.scss';
 
 function App() {
-  const [open, setOpen] = useState(false);
+	const [modalStatus, setModalStatus] = useState(true);
+	
+	const toggleModal = (toggle) => {
+		setModalStatus(toggle);
+	}
 
-let stringsValues = [
-	"I'm Fullstack Developer", 
-	"I'm Python Developer", 
-	"I'm Javascript Developer", 
-	"I'm self-taught Programmer",
-	"I'm person who never stops learning"
-]
+	const ModalHandler = () => {
+		return <ContactModal modalStatus={modalStatus} toggleModal={toggleModal} />	
+	}
 
-  return (
+	let stringsValues = [
+		"I'm Fullstack Developer", 
+		"I'm Python Developer", 
+		"I'm Javascript Developer", 
+		"I'm self-taught Programmer",
+		"I'm person who never stops learning"
+	]
+
+  	return (
     <>
 		<div className="container">
 			<div className="d-flex flex-column flex-md-row align-items-center fixed-nav">
@@ -55,7 +63,7 @@ let stringsValues = [
 						<div className="col-md-4">
 						<form action="#">
 							<input id="search-project" placeholder="Python, Restful API, Postgres... " type="text"/>
-							<label className="search-icon" htmlFor="search-project"><i class="fas fa-search"></i></label>
+							<label className="search-icon" htmlFor="search-project"><i className="fas fa-search"></i></label>
 						</form>
 						</div>
 					</div>
@@ -73,21 +81,21 @@ let stringsValues = [
 			<div className="contact-container">
 				<div className="contact">
 					<h4>Get in touch?</h4>
-					<button className="btn btn-primary">Contact Me</button>
+					<button className="btn btn-primary" onClick={toggleModal}>Contact Me</button>
 				</div>
 			</div>
 			<ul className="social-icons">
 				<li>
-					<a href="#"><i class="fab fa-instagram"></i></a>
+					<a href="#"><i className="fab fa-instagram"></i></a>
 				</li>
 				<li>
-					<a href="#"><i class="fab fa-github"></i></a>
+					<a href="#"><i className="fab fa-github"></i></a>
 				</li>
 				<li>
-					<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					<a href="#"><i className="fab fa-linkedin-in"></i></a>
 				</li>
 				<li>
-					<a href="#"><i class="fas fa-envelope"></i></a>
+					<a href="#"><i className="fas fa-envelope"></i></a>
 				</li>
 			</ul>
 
@@ -95,14 +103,14 @@ let stringsValues = [
 				<a 
 				title="React JS" 
 				href="https://es.reactjs.org/" 
-				target="blank"> <i class="fab fa-react"></i></a>
+				target="blank"> <i className="fab fa-react"></i></a>
 			</p>
 		</footer>
 
-		<ContactModal />
+		<ModalHandler />
 
-    </>
-  );
+	</>
+  	);
 }
 
 export default App;
