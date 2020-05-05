@@ -1,0 +1,24 @@
+.carousel-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    left: 250px;
+    position: relative;
+
+    .carousel.slide {
+        position: absolute;
+
+        .carousel-item {
+            padding: 0 25px;
+        }
+
+        .carousel-control-prev {
+            display: none;
+        }
+
+        .carousel-control-next {
+            display: none;
+        }
+
+    }
+}

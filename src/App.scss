@@ -1,0 +1,298 @@
+$dark: #012326;
+$white: #fff;
+
+$light-blue: #57F2E3;
+$medium-blue: #2E88A6;
+$blue: #07598C;
+
+$green: #26A67F;
+
+$oranje: #D95621;
+$dark-oranje: #8C330E;
+
+$ligt-red: #D92949;
+$red: #A62E4E;
+
+// Extras
+$purple: #5937A6;
+$yellow: #D9B121;
+
+$php: #8892BF;
+$wp: #0073aa;
+
+$text-dark:#343a40;
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1, h2, h3, h4, h5, a {
+    color:$text-dark;
+}
+
+.fixed-nav {
+    padding: 22px 0;
+}
+
+.card-layout {
+    border-radius: 10px;
+    box-shadow: 0 30px 50px 0 rgba(79,36,152,0.2);
+}
+
+section.header-section {
+    background-color: $white;
+    color: black;
+    padding: 0 45px 40px 45px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 450px;
+
+    .typed-card {
+        background-color: $green;
+        border-radius: 10px;
+        box-shadow: 0 30px 50px 0 rgba(79,36,152,0.2);
+        color: white;
+        padding: 35px 50px;
+        width: 60%;
+        
+        h2 {
+            color: $white;
+        }
+
+        .strings{
+            font-size: 24px;
+        }
+    }
+
+    
+
+    .carousel-container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        left: 250px;
+        position: relative;
+
+        .carousel.slide {
+            position: absolute;
+
+            .carousel-item {
+                padding: 0 25px;
+            }
+    
+            .carousel-control-prev {
+                display: none;
+            }
+    
+            .carousel-control-next {
+                display: none;
+            }
+    
+        }
+    }
+
+    .carousel-indicators {
+        display: none;
+    }
+
+}
+
+.badges-container {
+    
+    ul {
+        width: 100%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            background-color: $ligt-red;
+            padding: 2px 8px;
+            margin: 0 4px;
+
+            &.python {
+                background: $blue;
+            }
+
+            &.js {
+                background: $yellow;
+            }
+
+            &.php {
+                background: $php;
+            }
+
+            &.wp {
+                background: $wp;
+            }
+
+            .bagde-tag {
+                color: $white;
+            }
+        }
+        
+    }
+}
+
+section.projects{
+    .bordered-title{
+        border-bottom: 1px solid grey;
+    }
+    h1 {
+        padding: 10px 0;
+    }
+
+    .projects-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        form {
+            align-items: center;
+            border-radius: 10px;
+            border: 1px solid grey;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 15px 5px 8px;
+
+            input[type="text"] {
+                border: none;
+                color: $text-dark;
+                width: 92%;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            label {
+                margin: 0;
+                cursor: pointer;
+
+                svg {
+                    transition: all .1s;
+
+                    &:hover {
+                        font-size: 18px;
+                    }
+                }
+                
+                
+            }
+        }
+
+    }
+
+    .job-detail {
+        padding: 20px 25px;
+        margin: 35px 0;
+        background-color: $medium-blue;
+        border-radius: 10px;
+        box-shadow: -1px 4px 6px 0 rgba(79, 36, 152, 0.2);
+        transition: all .3s;
+
+        &:nth-child(even) {
+            background-color: $red;
+        }
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .content {
+            color: $white;
+
+            h2, h3, h4, h5, p {
+                color:$white;
+            }
+        }
+    }
+}
+
+footer {
+    align-items: center;
+    background-color: $dark;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 95px;
+
+    .contact-container{
+        display: block;
+        position: relative;
+        width: 100%;
+
+        .contact {
+            align-items: center;
+            background-color: $oranje;
+            border-radius: 10px;
+            box-shadow: 1px -14px 50px 0 rgba(1, 35, 38, 0.2);
+            
+            display: flex;
+            justify-content: space-between;
+            left: 0;
+            margin: 0 auto;
+            padding: 20px 35px;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: -35px;
+            width: 90%;
+
+            h4 {
+                color: $white;
+            }
+
+            button {
+                border-radius: 10px;
+                background-color: #8C330E;
+                border: none;
+                box-shadow: 1px -14px 50px 0 rgba(1, 35, 38, 0.2);
+                transition: all .3s;
+                padding: 10px 50px;
+            }
+
+            button:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    ul {
+        display: flex;
+        padding-left: 0;
+        padding-top: 120px;
+
+        li {
+            padding: 0;
+            padding: 0 35px;
+            list-style-type: none;
+            font-size: 30px;
+
+            a {
+                color: white;
+                transition: all .1s;
+                
+            }
+
+            a:hover {
+                color: $green;
+            }
+
+        }
+    }
+
+    .made-by {
+        font-weight: 100;
+    }
+}
