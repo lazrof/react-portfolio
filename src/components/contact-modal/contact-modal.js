@@ -21,7 +21,7 @@ const ContactModal = (props) => {
 			<Modal show={show} onHide={handleClose}>
 
 				<Modal.Header closeButton>
-					<Modal.Title>Get it Touch</Modal.Title>
+					<Modal.Title>Get in Touch</Modal.Title>
 				</Modal.Header>
 
 				<Modal.Body>
