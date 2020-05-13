@@ -1,5 +1,5 @@
 # Things to Do
-- Split enviroments for develop adn production with and .env file or something like that
+- Split enviroments for develop and production with and .env file or something like that
 - Fix tags
 - Fix Images and Content
 - Contact form
