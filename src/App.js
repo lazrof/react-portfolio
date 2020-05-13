@@ -18,7 +18,7 @@ function App() {
 	const [projectsData, setProjectsData] = useState({contents:null,  isLoading:true});
 
 	async function fetchData() {
-		const response = await fetch("http://portfolio.nunzioproject.xyz/api/post/?slug=portfolio");
+		const response = await fetch("https://portfolio.nunzioproject.xyz/api/post/?slug=portfolio");
 		response
 			.json()
 			.then(response => {
