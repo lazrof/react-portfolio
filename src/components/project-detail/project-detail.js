@@ -10,6 +10,18 @@ const ProjectDetail = (props) => {
         console.log('content')
         console.log(content)
 
+        const Tag = (props) => {
+            return (
+                <li className="card-layout php">
+                    <span className="bagde-tag">{props.name}</span>
+                </li>
+            )
+        }
+
+        const TagsHandler = () => {
+            return (content.tags.map(data => <Tag key={data.name} name={data.name} />))
+        }
+
         return(
             <div className="job-detail card-layout">
                 <div className="row">
@@ -30,7 +42,8 @@ const ProjectDetail = (props) => {
                         </div>
                         <div className="badges-container">
                             <ul>
-                                <li className="card-layout php">
+                                <TagsHandler />
+                                {/* <li className="card-layout php">
                                     <span className="bagde-tag">PHP</span>
                                 </li>
                                 <li className="card-layout js">
@@ -41,7 +54,7 @@ const ProjectDetail = (props) => {
                                 </li>
                                 <li className="card-layout wp">
                                     <span className="bagde-tag">Wordpress</span>
-                                </li>
+                                </li> */}
                             </ul>
                         </div>
                     </div>

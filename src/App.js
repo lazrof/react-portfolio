@@ -18,12 +18,12 @@ function App() {
 	const [projectsData, setProjectsData] = useState({contents:null,  isLoading:true});
 
 	async function fetchData() {
-		const response = await fetch("https://portfolio.nunzioproject.xyz/api/post/?slug=portfolio");
+		const response = await fetch("https://portfolio.nunzioproject.xyz/api/post/portfolio/");
 		response
 			.json()
 			.then(response => {
 				setProjectsData({
-					contents:response[0].contents, 
+					contents:response.contents, 
 					isLoading:false}
 				)
 			})
@@ -71,6 +71,7 @@ function App() {
 					projectsDetails.push(obj)
 				}
 			})
+			projectsDetails.reverse();
 			
 			return (
 				projectsDetails.map(data => <ProjectDetail key={data.key} data={data} />)
