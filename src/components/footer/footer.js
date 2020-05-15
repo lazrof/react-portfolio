@@ -13,17 +13,17 @@ const Footer = () => {
                     </div>
                 </div> */}
                 <ul className="social-icons">
-                    <li>
+                    {/* <li>
                         <a href="#"><i className="fab fa-instagram"></i></a>
-                    </li>
+                    </li> */}
                     <li>
-                        <a href="#"><i className="fab fa-github"></i></a>
+                        <a href="https://github.com/lazrof"><i className="fab fa-github"></i></a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="#"><i className="fab fa-linkedin-in"></i></a>
-                    </li>
+                    </li> */}
                     <li>
-                        <a href="#"><i className="fas fa-envelope"></i></a>
+                        <a href="mailto:nunzio.projects@gmail.com"><i className="fas fa-envelope"></i></a>
                     </li>
                 </ul>
 
