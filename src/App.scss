@@ -113,20 +113,11 @@ section.header-section {
             padding: 2px 8px;
             margin: 0 4px;
 
-            &.python {
-                background: $blue;
-            }
-
-            &.js {
-                background: $yellow;
-            }
-
-            &.php {
-                background: $php;
-            }
-
-            &.wp {
-                background: $wp;
+            &.tag {
+                background: #51a67f;
+                border: 1px solid rgba(210, 210, 210, 0.2);
+                box-shadow: 0px 3px 6px 0 rgba(81, 166, 127, .1);
+                box-shadow: green;
             }
 
             .bagde-tag {
@@ -215,6 +206,7 @@ section.projects{
             justify-content: center;
             align-items: center;
             height: 100%;
+            padding-bottom: .5rem;
         }
 
         .content {

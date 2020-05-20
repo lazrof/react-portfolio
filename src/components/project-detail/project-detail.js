@@ -7,12 +7,9 @@ const ProjectDetail = (props) => {
 
     if (content){
 
-        console.log('content')
-        console.log(content)
-
         const Tag = (props) => {
             return (
-                <li className="card-layout php">
+                <li className="card-layout tag">
                     <span className="bagde-tag">{props.name}</span>
                 </li>
             )

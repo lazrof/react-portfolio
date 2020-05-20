@@ -7,9 +7,11 @@ import ReactHtmlParser from 'react-html-parser';
 import ContactModal from './components/contact-modal/contact-modal';
 import Footer from './components/footer/footer';
 import HomeCarousel from './components/home-carousel/home-carousel';
+import Loader from './components/loader/loader';
 import Navbar from './components/navbar/navbar';
 import ProjectDetail from './components/project-detail/project-detail';
 import ProjectSearch from './components/project-search/project-search';
+
 
 import './App.scss';
 
@@ -39,7 +41,17 @@ function App() {
 		if (projectsData.isLoading){
 			return '';
 		} else {
-			let mainContent = projectsData.contents.find(element => element.key == "main-content");
+			
+			let mainContent = projectsData.contents.find(
+				element => element.key == "main-content"
+			);
+			let mainCarouselImages = projectsData.contents.find(
+				element => element.key == "main-carousel"
+			);
+
+			console.log('mainCarouselImages');
+			console.log(mainCarouselImages);
+
 			return (
 				<section className="header-section">
 					<div className="typed-card">
@@ -53,7 +65,7 @@ function App() {
 						/>
 					</div>
 
-					<HomeCarousel />
+					<HomeCarousel data={mainCarouselImages} />
 
 				</section>
 			);
@@ -62,7 +74,7 @@ function App() {
 
 	const ProjectDetailHandler = () => {
 		if (projectsData.isLoading){
-			return '';
+			return null;
 		} else {
 			
 			let projectsDetails = []			
@@ -97,6 +109,8 @@ function App() {
 
   	return (
     <>	
+		{projectsData.isLoading ? <Loader/> : ''}
+
 		<div className="container">			
 			<Navbar/>
 			<MainSectionHandler />
