@@ -13,23 +13,28 @@ import ProjectDetail from './components/project-detail/project-detail';
 import ProjectSearch from './components/project-search/project-search';
 
 
+import data from './data/data.json';
 import './App.scss';
 
 function App() {
 	const [modalStatus, setModalStatus] = useState(false);
 	const [projectsData, setProjectsData] = useState({contents:null,  isLoading:true});
-
+	console.log(data)
 	async function fetchData() {
-		const response = await fetch("https://portfolio.nunzioproject.xyz/api/post/portfolio/");
-		response
-			.json()
-			.then(response => {
-				setProjectsData({
-					contents:response.contents, 
-					isLoading:false}
-				)
-			})
-			.catch(err => console.log(err));
+		setProjectsData({
+			contents:data.contents, 
+			isLoading:false}
+		)
+		// const response = await fetch("http://localhost:8000/api/post/portfolio/");
+		// response
+		// 	.json()
+		// 	.then(response => {
+		// 		setProjectsData({
+		// 			contents:response.contents, 
+		// 			isLoading:false}
+		// 		)
+		// 	})
+		// 	.catch(err => console.log(err));
 	}
 
 	useEffect(() => {

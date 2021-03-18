@@ -22,7 +22,7 @@ const ProjectDetail = (props) => {
         return(
             <div className="job-detail card-layout">
                 <div className="row">
-                    <div className="col-md-4">
+                    <div className="col-md-4 d-none">
                         <div className="image">
                             <img src=""
                                 width="150px"
@@ -31,7 +31,7 @@ const ProjectDetail = (props) => {
                             />
                         </div>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-12">
                         <div className="content">
 
                             { ReactHtmlParser (content.value) }
