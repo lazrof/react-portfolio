@@ -9,3 +9,5 @@ Deployed using github pages https://lazrof.github.io/react-portfolio/
 - Search form Functionality (or Hidden temporarily)
 - Favicon
 - SEO
+  - Re-create the project in NextJS
+  - Or use Static site generator
